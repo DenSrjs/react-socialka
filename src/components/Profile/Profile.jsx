@@ -1,5 +1,6 @@
 import React from 'react';
-import s from'../style/Profile.module.css'
+import s from './Profile.module.css'
+import MyPosts from "./MyPosts/MyPosts";
 
 const Profile = ()=>{
     return(
@@ -8,12 +9,7 @@ const Profile = ()=>{
                 <img src="" alt="фон"/>
             </div>
             <div>ava + description</div>
-            <div>My posts</div>
-            <div>New post</div>
-            <div>
-                <div>post1</div>
-                <div>post2</div>
-            </div>
+            <MyPosts/>
         </div>
     )
 }
