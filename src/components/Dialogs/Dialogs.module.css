@@ -1,1 +1,24 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
 
+.message{
+
+}
+
+.name__list{
+
+}
+
+.name__item{
+
+}
+
+.message__item{
+
+}
+
+.active{
+    color: red;
+}
