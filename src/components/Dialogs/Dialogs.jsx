@@ -2,30 +2,36 @@ import React from 'react';
 import s from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
 
+const DialogItems = (props) => {
+    let path = "dialogs/1" + props.id;
+    return (
+        <div className={s.name__item + ' ' + s.active}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
+    )
+}
+
+const Message =(props)=>{
+    return <div className={s.message__item}>{props.message}</div>
+}
+
 const Dialogs = (props) => {
     return (
         <div className={s.dialogs}>
             <div className={s.name__list}>
-                <div className={s.name__item + ' ' + s.active}>
-                    <NavLink to="dialogs/1">Andrey</NavLink>
-                </div>
-                <div className={s.name__item}>
-                    <NavLink to="/dialogs/2">Valera</NavLink>
-                </div>
-                <div className={s.name__item}>
-                    <NavLink to="/dialogs/3">Aleksandr</NavLink>
-                </div>
-                <div className={s.name__item}>
-                    <NavLink to="/dialogs/4">Matvey</NavLink>
-                </div>
-                <div className={s.name__item}>
-                    <NavLink to="/dialogs/5">Elena</NavLink>
-                </div>
+                <DialogItems name="Andrey" id="1"/>
+                <DialogItems name="Valera" id="2"/>
+                <DialogItems name="Aleksandr" id="3"/>
+                <DialogItems name="Matvey" id="4"/>
+                <DialogItems name="Elena" id="5"/>
+                <DialogItems name="Egor" id="6"/>
+                <DialogItems name="Daniil" id="7"/>
             </div>
             <div className={s.message}>
-                <div className={s.message__item}>Hi</div>
-                <div className={s.message__item}>Hello</div>
-                <div className={s.message__item}>Yo</div>
+                <Message message='hi'/>
+                <Message message='dfgdf'/>
+                <Message message='dfh'/>
+                <Message message='erter'/>
             </div>
         </div>
     )
